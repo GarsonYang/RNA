@@ -5,7 +5,6 @@ import java.io.*;
 
 public class Nussinov
 {
-   //I use the index in the slides
    public static void main (String[] args) throws FileNotFoundException
    {
 
@@ -90,9 +89,9 @@ public class Nussinov
             //find the t that pairs j
             int t;
             for(t=j-5;t>left;t--)
-               if(t==left&&OPT[t][j]==1+OPT[t+1][j-1]) 
+               if(t==left&&OPT[t][j]==1+OPT[t+1][j]) 
                   break;
-               else if(OPT[left][j]==1+OPT[left][t-1]+OPT[t+1][j-1])
+               else if(OPT[left][j]==1+OPT[left][t-1]+OPT[t+1][j])
                   break;
             
             se[t]='(';
